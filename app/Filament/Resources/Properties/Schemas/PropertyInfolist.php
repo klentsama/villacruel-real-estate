@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Properties\Schemas;
 
 use Filament\Infolists\Components\IconEntry;
+use Filament\Infolists\Components\ImageEntry;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Schema;
 
@@ -41,8 +42,12 @@ class PropertyInfolist
                     ->boolean(),
                 IconEntry::make('parking')
                     ->boolean(),
-                IconEntry::make('parking_spaces')
-                    ->boolean(),
+                TextEntry::make('parking_spaces')
+                    ->numeric()
+                    ->placeholder('-'),
+                ImageEntry::make('images')
+                    ->placeholder('-')
+                    ->columnSpanFull(),
                 TextEntry::make('slug'),
                 TextEntry::make('meta_title'),
                 IconEntry::make('is_featured')
