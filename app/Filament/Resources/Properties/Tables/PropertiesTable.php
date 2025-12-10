@@ -25,9 +25,10 @@ class PropertiesTable
                 TextColumn::make('status')
                     ->searchable(),
                 TextColumn::make('price')
-                    ->money()
+                    ->money('USD')
                     ->sortable(),
                 TextColumn::make('price_per_sqft')
+                    ->money('USD')
                     ->numeric()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
