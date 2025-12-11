@@ -90,7 +90,7 @@
                         <span class="text-xl font-bold">Real Estate App</span>
                     </div>
                     <p class="text-gray-300 mb-4">
-                        Your trusted partner in finding the perfect property in Tanzania.
+                        Your trusted partner in finding the perfect property.
                         We offer the best selection of houses, apartments, land, and commercial properties.
                     </p>
                     <div class="flex space-x-4">
@@ -118,9 +118,8 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
                     <ul class="space-y-2 text-gray-300">
-                        <li>📍 Dar es Salaam, Tanzania</li>
                         <li>📞 +255 123 456 789</li>
-                        <li>✉️ info@realestate.tz</li>
+                        <li>✉️ info@realestate.test</li>
                         <li>🕐 Mon - Fri: 9AM - 6PM</li>
                     </ul>
                 </div>

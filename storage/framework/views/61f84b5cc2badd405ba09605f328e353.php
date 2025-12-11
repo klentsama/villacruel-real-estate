@@ -4,7 +4,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div class="text-center">
                 <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100">Find Your Dream Property</h1>
-                <p class="mt-2 text-lg text-gray-600 dark:text-gray-300">Discover the best real estate opportunities in Tanzania</p>
+                <p class="mt-2 text-lg text-gray-600 dark:text-gray-300">Discover the best real estate opportunities.</p>
             </div>
         </div>
     </div>
@@ -71,7 +71,7 @@
                 
                 <div>
                     
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Min Price (TZS)</label>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Min Price (USD)</label>
                     <input type="number" wire:model.live.debounce.500ms="minPrice" placeholder="Min price"
                         
                         class="w-full text-gray-900 dark:text-gray-200 dark:bg-gray-700 p-2 rounded-md border border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500">
@@ -79,7 +79,7 @@
 
                 <div>
                     
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Max Price (TZS)</label>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Max Price (USD)</label>
                     <input type="number" wire:model.live.debounce.500ms="maxPrice" placeholder="Max price"
                         
                         class="w-full text-gray-900 dark:text-gray-200 dark:bg-gray-700 p-2 rounded-md border border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500">
@@ -217,7 +217,7 @@
                                     <span class="text-xl font-bold text-green-600"><?php echo e($property->formatted_price); ?></span>
                                     <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($property->price_per_sqft): ?>
                                         
-                                        <span class="text-xs text-gray-500 dark:text-gray-400">TZS <?php echo e(number_format($property->price_per_sqft, 0)); ?>/sqft</span>
+                                        <span class="text-xs text-gray-500 dark:text-gray-400">USD <?php echo e(number_format($property->price_per_sqft, 0)); ?>/sqft</span>
                                     <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                 </div>
                                 
@@ -298,7 +298,7 @@
                                             <span class="text-2xl font-bold text-green-600"><?php echo e($property->formatted_price); ?></span>
                                             <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($property->price_per_sqft): ?>
                                                 
-                                                <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">TZS <?php echo e(number_format($property->price_per_sqft, 0)); ?>/sqft</span>
+                                                <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">USD <?php echo e(number_format($property->price_per_sqft, 0)); ?>/sqft</span>
                                             <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                                         </div>
                                         

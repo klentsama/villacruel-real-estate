@@ -4,7 +4,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div class="text-center">
                 <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100">Find Your Dream Property</h1>
-                <p class="mt-2 text-lg text-gray-600 dark:text-gray-300">Discover the best real estate opportunities in Tanzania</p>
+                <p class="mt-2 text-lg text-gray-600 dark:text-gray-300">Discover the best real estate opportunities.</p>
             </div>
         </div>
     </div>
@@ -71,7 +71,7 @@
                 {{-- Price Range --}}
                 <div>
                     {{-- Adjusted label text color for better contrast in light mode --}}
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Min Price (TZS)</label>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Min Price (USD)</label>
                     <input type="number" wire:model.live.debounce.500ms="minPrice" placeholder="Min price"
                         {{-- Added text color for both modes and dark border color --}}
                         class="w-full text-gray-900 dark:text-gray-200 dark:bg-gray-700 p-2 rounded-md border border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500">
@@ -79,7 +79,7 @@
 
                 <div>
                     {{-- Adjusted label text color for better contrast in light mode --}}
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Max Price (TZS)</label>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Max Price (USD)</label>
                     <input type="number" wire:model.live.debounce.500ms="maxPrice" placeholder="Max price"
                         {{-- Added text color for both modes and dark border color --}}
                         class="w-full text-gray-900 dark:text-gray-200 dark:bg-gray-700 p-2 rounded-md border border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500">
@@ -216,7 +216,7 @@
                                     <span class="text-xl font-bold text-green-600">{{ $property->formatted_price }}</span>
                                     @if($property->price_per_sqft)
                                         {{-- Added dark text color to price per sqft --}}
-                                        <span class="text-xs text-gray-500 dark:text-gray-400">TZS {{ number_format($property->price_per_sqft, 0) }}/sqft</span>
+                                        <span class="text-xs text-gray-500 dark:text-gray-400">USD {{ number_format($property->price_per_sqft, 0) }}/sqft</span>
                                     @endif
                                 </div>
                                 
@@ -296,7 +296,7 @@
                                             <span class="text-2xl font-bold text-green-600">{{ $property->formatted_price }}</span>
                                             @if($property->price_per_sqft)
                                                 {{-- Added dark text color to price per sqft --}}
-                                                <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">TZS {{ number_format($property->price_per_sqft, 0) }}/sqft</span>
+                                                <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">USD {{ number_format($property->price_per_sqft, 0) }}/sqft</span>
                                             @endif
                                         </div>
                                         

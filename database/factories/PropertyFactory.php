@@ -19,7 +19,7 @@ class PropertyFactory extends Factory
     {
         $type = $this->faker->randomElement(['house', 'apartment', 'condo', 'townhouse', 'villa', 'land', 'commercial']);
         $listingType = $this->faker->randomElement(['sale', 'rent']);
-        $city = $this->faker->randomElement(['Dar es Salaam', 'Arusha', 'Mwanza', 'Dodoma', 'Mbeya', 'Tanga', 'Morogoro']);
+        $city = $this->faker->randomElement(['Davao ', 'Cebu', 'Quezon', 'Taguig', 'Pasig', 'Leyte', 'Mandaue']);
 
         // Pricing based on type and listing
         $basePrice = match ($type) {
@@ -47,7 +47,7 @@ class PropertyFactory extends Factory
             'address' => $this->faker->streetAddress(),
             'city' => $city,
             'state' => $this->faker->randomElement(['Dar es Salaam', 'Arusha', 'Mwanza', 'Dodoma', 'Mbeya']),
-            'country' => 'Tanzania',
+            'country' => 'Philippines',
             'postal_code' => $this->faker->optional()->postcode(),
             'latitude' => $this->getLatitudeForCity($city),
             'longitude' => $this->getLongitudeForCity($city),
@@ -106,26 +106,26 @@ class PropertyFactory extends Factory
     private function getLatitudeForCity(string $city): float
     {
         return match ($city) {
-            'Dar es Salaam' => $this->faker->randomFloat(6, -6.9, -6.7),
-            'Arusha' => $this->faker->randomFloat(6, -3.4, -3.3),
-            'Mwanza' => $this->faker->randomFloat(6, -2.6, -2.4),
-            'Dodoma' => $this->faker->randomFloat(6, -6.3, -6.1),
-            'Mbeya' => $this->faker->randomFloat(6, -8.9, -8.8),
-            'Tanga' => $this->faker->randomFloat(6, -5.1, -5.0),
-            'Morogoro' => $this->faker->randomFloat(6, -6.9, -6.7),
+            'Davao' => $this->faker->randomFloat(6, -6.9, -6.7),
+            'Cebu' => $this->faker->randomFloat(6, -3.4, -3.3),
+            'Quezon' => $this->faker->randomFloat(6, -2.6, -2.4),
+            'Taguig' => $this->faker->randomFloat(6, -6.3, -6.1),
+            'Pasig' => $this->faker->randomFloat(6, -8.9, -8.8),
+            'Leyte' => $this->faker->randomFloat(6, -5.1, -5.0),
+            'Mandaue' => $this->faker->randomFloat(6, -6.9, -6.7),
             default => $this->faker->randomFloat(6, -10, -1),
         };
     }
     private function getLongitudeForCity(string $city): float
     {
         return match ($city) {
-            'Dar es Salaam' => $this->faker->randomFloat(6, 39.1, 39.3),
-            'Arusha' => $this->faker->randomFloat(6, 36.7, 36.9),
-            'Mwanza' => $this->faker->randomFloat(6, 32.8, 33.0),
-            'Dodoma' => $this->faker->randomFloat(6, 35.7, 35.9),
-            'Mbeya' => $this->faker->randomFloat(6, 33.4, 33.6),
-            'Tanga' => $this->faker->randomFloat(6, 39.0, 39.2),
-            'Morogoro' => $this->faker->randomFloat(6, 37.5, 37.7),
+            'Davao'  => $this->faker->randomFloat(6, 39.1, 39.3),
+            'Cebu' => $this->faker->randomFloat(6, 36.7, 36.9),
+            'Quezon' => $this->faker->randomFloat(6, 32.8, 33.0),
+            'Taguig' => $this->faker->randomFloat(6, 35.7, 35.9),
+            'Pasig' => $this->faker->randomFloat(6, 33.4, 33.6),
+            'Leyte' => $this->faker->randomFloat(6, 39.0, 39.2),
+            'Mandaue' => $this->faker->randomFloat(6, 37.5, 37.7),
             default => $this->faker->randomFloat(6, 30, 40),
         };
     }
